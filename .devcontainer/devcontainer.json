@@ -10,6 +10,5 @@
   },
   "containerEnv": {
     "REMOTE_USER": "${localEnv:USER}"
-  },
-  "postCreateCommand": "sh generate-kubeconfig.sh"
+  }
 }
