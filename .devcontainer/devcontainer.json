@@ -1,0 +1,15 @@
+{
+  "name": "Symfony API - Helm - Skaffold",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest",
+      "helm": "latest",
+      "minikube": "none"
+    }
+  },
+  "containerEnv": {
+    "REMOTE_USER": "${localEnv:USER}"
+  },
+  "postCreateCommand": "sh generate-kubeconfig.sh"
+}
